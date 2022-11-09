@@ -45,17 +45,32 @@ int main ()
   triangle t;
   rectangle r;
   
-  cout<<"\n************Triangle*************\n"<<endl;
+  int choice;
   
-  ptr = &t;
-  ptr->get ();
-  ptr->area ();
+  while(choice!=3)
+  {
+    cout<<"\n1.Triangles area \n2.Rectangles area \n3.exit";
+    cout<<"\nPlease enter a choice : ";
+    cin>>choice;
+    
+    switch(choice)
+    {
+        case 1: 
+                cout<<"\n************Triangle*************\n"<<endl;
   
-  cout<<"\n************Rectangle*************\n"<<endl;
-  
-  ptr = &r;
-  ptr->get ();
-  ptr->area ();
+                ptr = &t;
+                ptr->get ();
+                ptr->area ();
+                break;
+        case 2:
+                cout<<"\n************Rectangle*************\n"<<endl;
+    
+                ptr = &r;
+                ptr->get ();
+                ptr->area ();
+                break;
+    }
+  }
   
   return 0;
 }
